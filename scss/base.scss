@@ -5,7 +5,6 @@
     border: none;
 }
 
-
 /* FONTS */
 
 @font-face {
@@ -34,10 +33,94 @@ h6 {
 
 p,
 span,
-a {
+a,
+label {
     font-family: $paragrape-one;
     color: #3F3F42;
+    text-decoration: none;
 }
+
+$sizes: 10;
+
+@mixin margin-classes {
+    @for $i from 1 through $sizes {
+        $margin: $i * 10px;
+
+        /* margin #{$margin} */
+        .m#{$i} {
+            margin: $margin;
+        }
+
+        .ml#{$i} {
+            margin-left: $margin;
+        }
+
+        .mr#{$i} {
+            margin-right: $margin;
+        }
+
+        .mt#{$i} {
+            margin-top: $margin;
+        }
+
+        .mb#{$i} {
+            margin-bottom: $margin;
+        }
+
+        .mx#{$i} {
+            margin-left: $margin;
+            margin-right: $margin;
+        }
+
+        .my#{$i} {
+            margin-top: $margin;
+            margin-bottom: $margin;
+        }
+    }
+}
+
+@include margin-classes;
+
+
+@mixin padding-classes {
+    @for $i from 1 through $sizes {
+        $padding: $i * 10px;
+
+        /* padding #{$padding} */
+        .p#{$i} {
+            padding: $padding;
+        }
+
+        .pl#{$i} {
+            padding-left: $padding;
+        }
+
+        .pr#{$i} {
+            padding-right: $padding;
+        }
+
+        .pt#{$i} {
+            padding-top: $padding;
+        }
+
+        .pb#{$i} {
+            padding-bottom: $padding;
+        }
+
+        .px#{$i} {
+            padding-left: $padding;
+            padding-right: $padding;
+        }
+
+        .py#{$i} {
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
+    }
+}
+
+@include padding-classes;
+
 
 /* BUTTON */
 
@@ -47,8 +130,82 @@ a {
     text-align: center;
     background-color: $main-color;
     color: #FFF;
-    padding: 20px 0;
+    padding: 15px 0;
     font-size: 17px;
     font-family: 'Rubik-Bold';
     border-radius: 5px;
+    border: 2px solid $main-color;
+}
+
+.btn-full-alt {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #FFF;
+    color: $main-color;
+    padding: 15px 0;
+    font-size: 17px;
+    font-family: 'Rubik-Bold';
+    border-radius: 5px;
+    border: 2px solid $main-color;
+}
+
+
+input,
+textarea {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 4px;
+    border: 2px solid #C7C7C7;
+}
+
+input:hover {
+    border: 2px solid $main-color;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid $main-color;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: 0px;
+    font-size: 16px;
+    color: $main-color;
+    left: 11px;
+}
+
+input:focus~.bar:before,
+textarea:focus~.bar:before {
+    width: 320px;
+}
+
+input[type="password"] {
+    letter-spacing: 0.3em;
+}
+
+.group {
+    position: relative;
+}
+
+label {
+    color: #c6c6c6;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 5%;
+    top: 50%;
+    transform: translate(0px, -50%);
+    transition: 300ms ease all;
+    background-color: #fff;
+    padding: 0 2px;
 }

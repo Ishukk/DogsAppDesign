@@ -667,6 +667,8 @@ label {
   font-family: 'Rubik-Bold';
   border-radius: 5px;
   border: 2px solid #FF6A59;
+  -webkit-box-shadow: 0px 3px 8px rgba(63, 63, 66, 0.18);
+          box-shadow: 0px 3px 8px rgba(63, 63, 66, 0.18);
 }
 
 .btn-full-alt {
@@ -680,6 +682,8 @@ label {
   font-family: 'Rubik-Bold';
   border-radius: 5px;
   border: 2px solid #FF6A59;
+  -webkit-box-shadow: 0px 3px 8px rgba(63, 63, 66, 0.18);
+          box-shadow: 0px 3px 8px rgba(63, 63, 66, 0.18);
 }
 
 input,
@@ -771,7 +775,8 @@ label {
 }
 
 .auth-bg .center-box .heading p {
-  font-size: 20px;
+  font-size: 18px;
+  color: #96989A;
 }
 
 .auth-bg .center-box .form-div img.dog-avator {
@@ -793,5 +798,45 @@ label {
 .auth-bg .center-box .form-div .link {
   color: #FF6A59;
   font-weight: bold;
+}
+
+.auth-bg .center-box .form-div .error {
+  color: red;
+  text-align: left;
+  display: block;
+  margin-top: 5px;
+}
+
+.auth-bg .center-box input.otp {
+  height: 45px;
+  width: 45px;
+  font-size: 25px;
+  padding: 0;
+  text-align: center;
+  border: 2px solid #C7C7C7;
+  color: #FF6A59;
+}
+
+.auth-bg .center-box input.otp::-webkit-inner-spin-button,
+.auth-bg .center-box input.otp::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.auth-bg .center-box input.otp:focus {
+  outline: none;
+  border: 2px solid #FF6A59;
+}
+
+.auth-bg .center-box .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.auth-bg .center-box .flex input {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 /*# sourceMappingURL=auth.css.map */

@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+}
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Rubik-Bold';
+    src: url(../assets/fonts/Rubik-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url(../assets/fonts/Rubik-Regular.ttf)
+}
+
+$heading-one: 'Rubik-Bold';
+$paragrape-one: 'Rubik-Regular';
+$main-color: #FF6A59;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-one;
+    color: #3F3F42;
+}
+
+p,
+span,
+a {
+    font-family: $paragrape-one;
+    color: #3F3F42;
+}
+
+/* BUTTON */
+
+.btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: $main-color;
+    color: #FFF;
+    padding: 20px 0;
+    font-size: 17px;
+    font-family: 'Rubik-Bold';
+    border-radius: 5px;
+}
